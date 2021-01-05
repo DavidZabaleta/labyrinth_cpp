@@ -12,9 +12,15 @@ public:
     Player();
 
     void CallInput();
+    void resetToSafePosition();
 
 protected:
     int x, y;
+    int lastX, lastY;
+public:
+    int getX() const;
+
+    int getY() const;
 };
 
 

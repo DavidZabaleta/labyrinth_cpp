@@ -5,5 +5,9 @@
 #include "../headers/MapCell.h"
 
 MapCell::MapCell() {
-    id = 0;
+    id = ' ';
+}
+
+bool MapCell::isBlocked() {
+    return id  == '1';
 }

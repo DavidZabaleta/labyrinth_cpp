@@ -1,4 +1,3 @@
-#include <iostream>
 #include "headers/Player.h"
 #include "headers/MapCell.h"
 #include "headers/GameMap.h"
@@ -10,7 +9,13 @@ int main() {
 
     while (isGameOver == false) {
         hero.CallInput();
-        gameMap.draw();
+
+        if (gameMap.setPlayerCell(hero.getX(), hero.getY())) {
+            gameMap.draw();
+        } else {
+            hero.resetToSafePosition();
+            gameMap.draw();
+        }
     }
 
     return 0;

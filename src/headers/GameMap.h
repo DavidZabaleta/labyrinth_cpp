@@ -12,9 +12,16 @@ class GameMap {
 public:
     GameMap();
 
+    MapCell* playerCell;
+
     MapCell cells[15][10];
 
     void draw();
+
+    bool setPlayerCell(int playerXAxis, int playerYAxis);
+
+protected:
+    void loadMapFromFile();
 };
 
 
