@@ -16,11 +16,17 @@ public:
 
     MapCell cells[15][10];
 
+    void drawIntro();
+
     void draw();
+
+    void drawVictory();
 
     bool setPlayerCell(int playerXAxis, int playerYAxis);
 
+    bool isGameOver;
 protected:
+
     void loadMapFromFile();
 };
 

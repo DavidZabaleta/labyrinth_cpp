@@ -1,13 +1,18 @@
+#include <iostream>
 #include "headers/Player.h"
 #include "headers/MapCell.h"
 #include "headers/GameMap.h"
 
 int main() {
-    bool isGameOver = false;
+
     Player hero;
     GameMap gameMap;
 
-    while (isGameOver == false) {
+    gameMap.drawIntro();
+
+    while (gameMap.isGameOver == false) {
+
+        std::cout<<"Introduce el comando de movimiento 'w''a''s''d': ";
         hero.CallInput();
 
         if (gameMap.setPlayerCell(hero.getX(), hero.getY())) {
