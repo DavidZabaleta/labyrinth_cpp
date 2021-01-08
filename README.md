@@ -1,6 +1,6 @@
-#Labyrinth  C++
+# Labyrinth  C++
 
-##Todo
+## Todo
 - Add enemies to the map, their actions and routines
 - Add difficulties to the game
 - Add more levels to reach the victory
